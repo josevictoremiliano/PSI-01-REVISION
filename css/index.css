@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --azul: #0bc5e3;
+  --preto: #212529;
+  --sombreamento: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+* {
+  scroll-behavior: smooth;
+}
+/*Scroll*/
+::-webkit-scrollbar {
+  width: 5px;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+  background: var(--preto);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--azul);
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: var(--preto);
+}
+
+/* Navbar */
+
+nav {
+  
+  background-color: #0bc6e3e3;
+  box-shadow: var(--sombreamento);
+}
+nav .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background: #032a30a9;
+  transition: ease-in-out background 600ms;
+  box-shadow: var(--sombreamento);
+}
+nav a {
+  color: white !important;
+}
+nav ul li:hover {
+  background-color: var(--preto);
+  border-radius: 3px;
+  transition: ease-in-out background 600ms;
+  box-shadow: var(--sombreamento);
+}
+nav .dropdown-menu {
+  margin-top: 1px !important;
+  background: #212529ef;
+}
+nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+nav .dropdown-item:focus,
+nav .dropdown-item:active,
+nav .dropdown-item:hover {
+  background-color: #383838 !important;
+}
+nav .dropdown-divider {
+  color: white !important;
+}
+
+/* Home */
+#home {
+  background: url(https://josevictoremiliano.github.io/meuportifolio/img/back.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .content {
+  color: white;
+  padding-top: 20vh;
+}
+#home .content span {
+  color: var(--azul);
+}
+
+/*home botões*/
+#home .btn {
+  font-weight: 700;
+  color: var(--preto);
+  background-color: white;
+  transition: background 700ms;
+}
+#home .btn:hover {
+  color: white;
+  background-color: var(--azul);
+}
+#home ul {
+  padding: unset;
+}
+#home ul li {
+  list-style: none;
+  margin-left: 10px;
+  display: inline;
+  align-items: baseline;
+}
+#home ul li a {
+  color: white;
+  font-size: 25pt;
+  transition: color ease-in-out 150ms;
+}
+#home ul li a:hover {
+  color: var(--azul);
+}
+#home .social a {
+  text-decoration: none;
+}
+
+/*Calculadoras*/
+#calculadoras {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100%;
+  padding: 50px 0px 50px;
+}
+#calculadoras .card {
+  color: white;
+  background: rgb(80, 158, 182);
+  background: linear-gradient(
+    180deg,
+    rgba(80, 158, 182, 0.6362920168067228) 0%,
+    rgba(93, 13, 139, 0.6783088235294117) 77%
+  );
+  background-size: cover;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: var(--sombreamento);
+}
+#calculadoras .title {
+  padding: 25px;
+  font-weight: bold;
+  font-size: 15pt;
+  color: white;
+}
+#calculadoras .resul {
+  margin-top: 9px;
+}
+
+/*Sobre*/
+#sobre {
+  background: url(../image/sobre3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 80px 10px;
+  width: 100vw;
+  height: 100%;
+  text-align: justify;
+  color: white;
+}
+#sobre .sconta {
+  background: rgb(0, 3, 93);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 3, 93, 0.36458333333333337) 0%,
+    rgba(0, 0, 0, 0.40379901960784315) 77%
+  );
+  border-radius: 9px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#sobre .icon {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 150px;
+}
+/*Breakpoints*/
+@media (max-width: 760px) {
+  /*Home icons*/
+  #home ul {
+    padding-top: unset;
+    padding-left: 5px;
+  }
+  #calculadoras .card {
+    margin: 5px;
+    width: 96vw;
+  }
+}
